@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 150px;
+}
+.container{
+    width: 30vw;
+    max-width: 1300px;
+    height: 45vh;
+    display: grid;
+    grid-template-columns: 200px 20px 200px;
+    grid-template-rows: 200px 80px;
+    grid-auto-columns: 140px;
+    grid-auto-rows: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+.contador {
+    font-size: 9rem;
+    font-weight: bold;
+    margin: auto;
+    
+}
+
+button {
+    width: 150px;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 15px indigo;
+}
+
+#iniciar{
+    background-color: blue;
+    color: #ccc;
+}
+
+#iniciar:hover {
+    background-color: rgba(0, 0, 255, 0.267);
+    color: black;
+    transition: all .3s ease ;
+}
+
+#finalizar{
+    background-color: red;
+    color: #ccc;
+}
+
+#finalizar:hover{
+    background-color: rgba(255, 0, 0, 0.295);
+    color: black;
+    transition: all .3s ease ;
+}
+
+#separador {
+    font-size: 5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+
