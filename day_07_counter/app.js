@@ -1,10 +1,12 @@
-let counter = 60;
+let counter = 59;
 let timeout;
 let timer_on = 0;
-let minuto = 4;
+let minuto = 10;
+
 
 function timedCount() {
     // document.getElementById("contador__2").innerHTML = counter;
+    document.getElementById('contador__1').innerHTML = `${minuto-1}`
     
     if(counter < 10){
         document.getElementById("contador__2").innerHTML = `0${counter}`
@@ -18,9 +20,7 @@ function timedCount() {
         }else{
             document.getElementById('contador__1').innerHTML = `${minuto-1}`
         } 
-        counter = 60;
-    }else{
-        document.getElementById('contador__1').innerHTML = minuto;
+        counter = 59;
     }
     
            
