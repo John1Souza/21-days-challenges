@@ -5,12 +5,48 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.light__is-active{
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 
 }
+.dark__is-active{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1c1b1b, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1c1b1b, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: all 0.3s ease;
+}
+
+
+.light__is-active .card__content h1{
+    background: #870000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: unset;  
+}
+
+.dark__is-active .card__content h1{
+    padding: 15px;
+    text-align: center;
+    font-size: 45px;   
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: unset;
+
+}
+
 
 .card__container{    
     display: flex;
@@ -25,18 +61,16 @@ body{
     text-align: justify;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.477);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .card__content h1{
     padding: 15px;
     text-align: center;
-    font-size: 45px;
-    text-transform: ;
-    color: #ccc;
+    font-size: 45px;   
     background-color: #ff8177;
     background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
     background-size: 100%;
@@ -47,10 +81,14 @@ body{
     text-transform: unset;
 
 }
+
 .card__content h2{
     font-size: 35px;
     padding: 10px;
     text-align: center;
+    color: black;
+}
+.dark__is-active .card__content h2{
     color: #ccc;
 }
 
@@ -60,9 +98,7 @@ body{
     padding: 5px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    
-    
+    gap: 10px; 
 }
 
 .fa-linkedin{
@@ -70,12 +106,46 @@ body{
 }
 
 .fa-github{
-    color: #fff;
+    color: black;
+}
+.dark__is-active .fa-github{
+    color: #ccc;
 }
 
 .fa-instagram{
     color: indigo;
 }
+.toggle__button{
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px;
+   
+   
+}
+.dark__toggle{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: black;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 
 @media screen and (max-width: 960px){
     .card__content{
