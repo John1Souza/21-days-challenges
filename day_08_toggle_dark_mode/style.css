@@ -6,97 +6,151 @@
 }
 
 body{
- 
-    background-color: #D9AFD9;
-    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
-.card__container{
-    width: 40vw;
-    height: 55vh;
-    max-width: 1300px;
-    max-height: 1080px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    text-align: justify;
+.card__container{    
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh; 
 
 }
 
 .card__content{
+    width: 800px;
+    height: 350px;
     text-align: justify;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.card__content h1, h2{
+.card__content h1{
     padding: 15px;
-    text-align: center;;
+    text-align: center;
+    font-size: 45px;
+    text-transform: ;
+    color: #ccc;
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: unset;
 
 }
+.card__content h2{
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    color: #ccc;
+}
 
-
+ 
 .social {
-    font-size: 2rem;
-    margin-top: 8vw;
-    padding: 25px;
+    font-size: 3rem;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     gap: 10px;
     
+    
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.fa-linkedin{
+    color: blue;
+}
+
+.fa-github{
+    color: #fff;
+}
+
+.fa-instagram{
+    color: indigo;
 }
 
 @media screen and (max-width: 960px){
-    .card__container{
-        width: 80vw;
+    .card__content{
+        width: 800px;
+        height: 400px;
     }
+
     .card__content h1{
-        font-size: 35px;
+        font-size: 45px;
+        padding: 10px;
+        text-align: center;   
+    } 
+    .card__content h2{
+        font-size: 40px;
+        padding: 15px;
     }
-    .social{
-        margin-top: 18vh;
-        justify-content: flex-start;
-        align-items: flex-start;   
-        text-align: justify;    
+
+    .social {
+        font-size: 3rem;
+        padding: 10px;       
+        margin-top: 10px;
+        justify-content: center;
     }
+    
 }
 @media screen and (max-width: 768px){
-    .card__container{
-        width: 80vw;
+    .card__content{
+        width: 700px;
+        height: 350px;
     }
+
     .card__content h1{
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+        color: #ccc;    
+    } 
+    .card__content h2{
         font-size: 35px;
+        padding: 10px;
     }
-    .social{
-        margin-top: 15vh;
-        justify-content: flex-start;
-        align-items: flex-start;   
-        text-align: justify;    
+
+    .social {
+        font-size: 3rem;
+        padding: 10px;       
+        margin-top: 10px;
+        justify-content: center;
     }
+    
 }
 @media screen and (max-width: 480px){
     .card__container{
-        width: 90vw;
-        height: 70vh;
+        margin-top: 15vh;
     }
+    .card__content{
+        width: 400px;
+        height: 450px;
+    }
+
     .card__content h1{
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+        color: #ccc;    
+    } 
+    .card__content h2{
         font-size: 35px;
+        padding: 10px;
     }
-    .social{
+
+    .social {
+        font-size: 2.5rem;
+        padding: 10px;       
+        margin-top: 10px;
         justify-content: center;
-        align-items: center;    
-        text-align: justify;    
     }
+    
 }
